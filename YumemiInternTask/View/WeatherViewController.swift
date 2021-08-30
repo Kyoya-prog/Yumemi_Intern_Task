@@ -1,10 +1,13 @@
 import UIKit
 
 class WeatherViewController: UIViewController, WeatherView {
+    var presenter: WeatherPresentation!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSubViews()
         addConstraint()
+        presenter = WeatherPresenter()
     }
 
     private let weatherImageView = UIImageView()
@@ -45,6 +48,7 @@ class WeatherViewController: UIViewController, WeatherView {
 
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
         reloadButton.setTitle("reload", for: .normal)
+        reloadButton.addTarget(self, action: #selector(reloadButtonAction(_:)), for: .touchUpInside)
         view.addSubview(reloadButton)
     }
 
@@ -77,6 +81,10 @@ class WeatherViewController: UIViewController, WeatherView {
             reloadButton.topAnchor.constraint(equalTo: redLabel.bottomAnchor, constant: 80),
             reloadButton.centerXAnchor.constraint(equalTo: redLabel.centerXAnchor)
         ])
+    }
+
+    @objc private func reloadButtonAction(_ sender: UIButton) {
+        presenter.fetchWeather()
     }
 
     // MARK: WeatherView
