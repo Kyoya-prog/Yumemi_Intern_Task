@@ -10,6 +10,15 @@ class WeatherViewController: UIViewController, WeatherView {
         presenter = WeatherPresenter(view: self)
     }
 
+    // MARK: WeatherView
+    
+    func showWeatherImage(image: UIImage, color: UIColor) {
+        weatherImageView.image = image
+        weatherImageView.tintColor = color
+    }
+
+    // MARK: Private
+
     private let weatherImageView = UIImageView()
 
     private let blueLabel = UILabel()
@@ -84,11 +93,5 @@ class WeatherViewController: UIViewController, WeatherView {
 
     @objc private func reloadButtonAction(_ sender: UIButton) {
         presenter.fetchWeather()
-    }
-
-    // MARK: WeatherView
-    func showWeatherImage(image: UIImage, color: UIColor) {
-        weatherImageView.image = image
-        weatherImageView.tintColor = color
     }
 }

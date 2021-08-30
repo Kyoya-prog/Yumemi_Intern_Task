@@ -7,6 +7,9 @@ class WeatherModel: WeatherModelProtocol {
     init(output: WeatherPresentationOutput) {
         self.output = output
     }
+
+    // MARK: WeatherModelProtocol
+    
     func fetchWeather() {
         let weatherString = YumemiWeather.fetchWeather()
         output?.outputWeather(weatherString: weatherString)

@@ -10,10 +10,14 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
         self.model = WeatherModel(output: self)
     }
 
+    // MARK: WeatherPresentation
+    
     func fetchWeather() {
         model.fetchWeather()
     }
 
+    // MARK: WeatherPresentationOutput
+    
     func outputWeather(weatherString: String) {
         guard let weather = Weather(rawValue: weatherString) else {
             fatalError("Unwxpected Weather String. YumemiWeather returned \(weatherString)")
