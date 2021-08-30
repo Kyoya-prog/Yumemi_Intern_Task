@@ -1,6 +1,6 @@
 import UIKit
 
-class WeatherViewController: UIViewController,WeatherView {
+class WeatherViewController: UIViewController, WeatherView {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSubViews()
@@ -78,7 +78,7 @@ class WeatherViewController: UIViewController,WeatherView {
             reloadButton.centerXAnchor.constraint(equalTo: redLabel.centerXAnchor)
         ])
     }
-    
+
     // MARK: WeatherView
     func showWeatherImage(image: UIImage) {
         weatherImageView.image = image

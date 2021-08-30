@@ -19,6 +19,7 @@
 		8831861C26DC80CC00427B82 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831861B26DC80CC00427B82 /* Colors.swift */; };
 		8831862426DCA14300427B82 /* WeatherContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862326DCA14300427B82 /* WeatherContract.swift */; };
 		8831862626DCA31E00427B82 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862526DCA31E00427B82 /* WeatherPresenter.swift */; };
+		8831862826DCA6EC00427B82 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862726DCA6EC00427B82 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8831861B26DC80CC00427B82 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8831862326DCA14300427B82 /* WeatherContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContract.swift; sourceTree = "<group>"; };
 		8831862526DCA31E00427B82 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		8831862726DCA6EC00427B82 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		8831862126DCA04200427B82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8831862726DCA6EC00427B82 /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				883185EA26DC72D300427B82 /* WeatherViewController.swift in Sources */,
 				8831862626DCA31E00427B82 /* WeatherPresenter.swift in Sources */,
 				8831861C26DC80CC00427B82 /* Colors.swift in Sources */,
+				8831862826DCA6EC00427B82 /* WeatherModel.swift in Sources */,
 				8831862426DCA14300427B82 /* WeatherContract.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
 				883185E826DC72D300427B82 /* SceneDelegate.swift in Sources */,
