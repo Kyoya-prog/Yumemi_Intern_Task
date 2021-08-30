@@ -87,7 +87,8 @@ class WeatherViewController: UIViewController, WeatherView {
     }
 
     // MARK: WeatherView
-    func showWeatherImage(image: UIImage) {
+    func showWeatherImage(image: UIImage, color: UIColor) {
         weatherImageView.image = image
+        weatherImageView.tintColor = color
     }
 }
