@@ -103,10 +103,12 @@
 		883185E426DC72D300427B82 /* YumemiInternTask */ = {
 			isa = PBXGroup;
 			children = (
+				8831862126DCA04200427B82 /* Model */,
+				8831862026DCA03700427B82 /* Presenter */,
+				8831861F26DCA03000427B82 /* View */,
 				8831861926DC809400427B82 /* Resource */,
 				883185E526DC72D300427B82 /* AppDelegate.swift */,
 				883185E726DC72D300427B82 /* SceneDelegate.swift */,
-				883185E926DC72D300427B82 /* ViewController.swift */,
 				883185EB26DC72D300427B82 /* Main.storyboard */,
 				883185F026DC72D500427B82 /* LaunchScreen.storyboard */,
 				883185F326DC72D500427B82 /* Info.plist */,
@@ -139,6 +141,28 @@
 				8831861B26DC80CC00427B82 /* Colors.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		8831861F26DCA03000427B82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				883185E926DC72D300427B82 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8831862026DCA03700427B82 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8831862126DCA04200427B82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
