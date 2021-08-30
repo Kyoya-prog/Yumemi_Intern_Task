@@ -7,7 +7,7 @@ class WeatherViewController: UIViewController, WeatherView {
         super.viewDidLoad()
         setUpSubViews()
         addConstraint()
-        presenter = WeatherPresenter()
+        presenter = WeatherPresenter(view: self)
     }
 
     private let weatherImageView = UIImageView()
@@ -27,7 +27,6 @@ class WeatherViewController: UIViewController, WeatherView {
         view.addSubview(centerView)
 
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
-        weatherImageView.backgroundColor = .black
         centerView.addSubview(weatherImageView)
 
         blueLabel.translatesAutoresizingMaskIntoConstraints = false

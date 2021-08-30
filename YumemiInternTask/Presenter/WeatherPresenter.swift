@@ -2,12 +2,12 @@ import Foundation
 import UIKit
 
 class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
-    var view: WeatherView
-    var model: WeatherModelProtocol
+    var view: WeatherView?
+    var model: WeatherModelProtocol!
 
-    init() {
-        view = WeatherViewController()
-        model = WeatherModel()
+    init(view: WeatherView) {
+        self.view = view
+        self.model = WeatherModel(output: self)
     }
 
     func fetchWeather() {
@@ -16,7 +16,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
 
     func outputWeather(weatherString: String) {
         let image = decideWeatherIcon(weatherString: weatherString)
-        view.showWeatherImage(image: image)
+        view?.showWeatherImage(image: image)
     }
 
     private func decideWeatherIcon(weatherString: String) -> UIImage {
