@@ -12,10 +12,8 @@ class WeatherModel: WeatherModelProtocol {
 
     func fetchWeather() {
         do {
-            let weatherDataString = try YumemiWeather.fetchWeather("{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }")
-            let data = Data(weatherDataString.utf8)
-            let weatherInfo = convertDataToDictionary(data: data)
-            output?.outputWeather(weatherString: "")
+            let weatherJsonString = try YumemiWeather.fetchWeather("{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }")
+            output?.outputWeather(jsonString: weatherJsonString)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
             switch error {
@@ -29,10 +27,5 @@ class WeatherModel: WeatherModelProtocol {
         } catch {
             fatalError("unexpected error occured : \(error.localizedDescription)")
         }
-    }
-    
-    private func convertDataToDictionary(data:Data)->[String:Any]?{
-        let weatherDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
-        return weatherDictionary
     }
 }

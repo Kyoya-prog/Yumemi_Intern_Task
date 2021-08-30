@@ -15,7 +15,6 @@
 		883185F226DC72D500427B82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883185F026DC72D500427B82 /* LaunchScreen.storyboard */; };
 		883185FD26DC72D500427B82 /* YumemiInternTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883185FC26DC72D500427B82 /* YumemiInternTaskTests.swift */; };
 		8831860826DC72D500427B82 /* YumemiInternTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831860726DC72D500427B82 /* YumemiInternTaskUITests.swift */; };
-		8831861726DC736900427B82 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
 		8831861C26DC80CC00427B82 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831861B26DC80CC00427B82 /* Colors.swift */; };
 		8831862426DCA14300427B82 /* WeatherContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862326DCA14300427B82 /* WeatherContract.swift */; };
 		8831862626DCA31E00427B82 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862526DCA31E00427B82 /* WeatherPresenter.swift */; };
@@ -24,6 +23,7 @@
 		8831862D26DCB77400427B82 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862C26DCB77400427B82 /* WeatherError.swift */; };
 		8831863226DCD43600427B82 /* WeatherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831863126DCD43600427B82 /* WeatherExtension.swift */; };
 		8831863626DDF5D500427B82 /* WeatherErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831863526DDF5D500427B82 /* WeatherErrorExtension.swift */; };
+		8831863826DE079E00427B82 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8831861726DC736900427B82 /* YumemiWeather in Frameworks */,
+				8831863826DE079E00427B82 /* YumemiWeather in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

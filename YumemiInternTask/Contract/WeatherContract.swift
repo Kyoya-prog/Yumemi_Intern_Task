@@ -18,8 +18,8 @@ protocol WeatherPresentation: AnyObject {
 
 protocol WeatherPresentationOutput: AnyObject {
     /// 取得した天気を出力する
-    /// - parameter weatherString;天気を表す文字列
-    func outputWeather(weatherString: String)
+    /// - parameter jsonString; 取得したjson文字列
+    func outputWeather(jsonString: String)
 
     /// エラーを出力する
     /// - parameter error:エラー
