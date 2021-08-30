@@ -13,9 +13,9 @@ class ViewController: UIViewController {
 
     private let redLabel = UILabel()
 
-    private let closeButton = UIButton()
+    private let closeButton = UIButton(type: .system)
 
-    private let reloadButton = UIButton()
+    private let reloadButton = UIButton(type: .system)
 
     private let centerView = UIView()
 
@@ -29,24 +29,22 @@ class ViewController: UIViewController {
 
         blueLabel.translatesAutoresizingMaskIntoConstraints = false
         blueLabel.text = "blue"
-        blueLabel.textColor = .blue
+        blueLabel.textColor = Color.baseColorBlue.value
         blueLabel.textAlignment = .center
         centerView.addSubview(blueLabel)
 
         redLabel.translatesAutoresizingMaskIntoConstraints = false
         redLabel.text = "red"
-        redLabel.textColor = .red
+        redLabel.textColor = Color.baseColorRed.value
         redLabel.textAlignment = .center
         centerView.addSubview(redLabel)
 
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("close", for: .normal)
-        closeButton.setTitleColor(Color.buttonColor1, for: .normal)
         view.addSubview(closeButton)
 
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
         reloadButton.setTitle("reload", for: .normal)
-        reloadButton.setTitleColor(Color.buttonColor1, for: .normal)
         view.addSubview(reloadButton)
     }
 
