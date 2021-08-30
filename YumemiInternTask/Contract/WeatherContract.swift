@@ -12,9 +12,10 @@ protocol WeatherPresentation:AnyObject{
     func fetchWeather()
 }
 
-protocol WeatherModelOutput:AnyObject{
+protocol WeatherPresentationOutput:AnyObject{
     /// 取得した天気を出力する
-    func outputWeather()
+    /// - parameter weatherString;天気を表す文字列
+    func outputWeather(weatherString:String)
 }
 
 protocol WeatherModelProtocol:AnyObject{

@@ -18,6 +18,7 @@
 		8831861726DC736900427B82 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
 		8831861C26DC80CC00427B82 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831861B26DC80CC00427B82 /* Colors.swift */; };
 		8831862426DCA14300427B82 /* WeatherContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862326DCA14300427B82 /* WeatherContract.swift */; };
+		8831862626DCA31E00427B82 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862526DCA31E00427B82 /* WeatherPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8831860926DC72D500427B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8831861B26DC80CC00427B82 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8831862326DCA14300427B82 /* WeatherContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContract.swift; sourceTree = "<group>"; };
+		8831862526DCA31E00427B82 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		8831862026DCA03700427B82 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				8831862526DCA31E00427B82 /* WeatherPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				883185EA26DC72D300427B82 /* WeatherViewController.swift in Sources */,
+				8831862626DCA31E00427B82 /* WeatherPresenter.swift in Sources */,
 				8831861C26DC80CC00427B82 /* Colors.swift in Sources */,
 				8831862426DCA14300427B82 /* WeatherContract.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
