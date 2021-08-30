@@ -9,7 +9,7 @@ class WeatherModel: WeatherModelProtocol {
     }
 
     // MARK: WeatherModelProtocol
-    
+
     func fetchWeather() {
         let weatherString = YumemiWeather.fetchWeather()
         output?.outputWeather(weatherString: weatherString)

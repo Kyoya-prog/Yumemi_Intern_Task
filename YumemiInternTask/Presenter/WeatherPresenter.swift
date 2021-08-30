@@ -1,6 +1,3 @@
-import Foundation
-import UIKit
-
 class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     var view: WeatherView?
     var model: WeatherModelProtocol!
@@ -11,13 +8,13 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     }
 
     // MARK: WeatherPresentation
-    
+
     func fetchWeather() {
         model.fetchWeather()
     }
 
     // MARK: WeatherPresentationOutput
-    
+
     func outputWeather(weatherString: String) {
         guard let weather = Weather(rawValue: weatherString) else {
             fatalError("Unwxpected Weather String. YumemiWeather returned \(weatherString)")

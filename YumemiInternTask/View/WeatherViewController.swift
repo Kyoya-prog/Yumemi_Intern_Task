@@ -5,13 +5,13 @@ class WeatherViewController: UIViewController, WeatherView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpSubViews()
+        setUpSubviews()
         addConstraint()
         presenter = WeatherPresenter(view: self)
     }
 
     // MARK: WeatherView
-    
+
     func showWeatherImage(image: UIImage, color: UIColor) {
         weatherImageView.image = image
         weatherImageView.tintColor = color
@@ -31,7 +31,7 @@ class WeatherViewController: UIViewController, WeatherView {
 
     private let centerView = UIView()
 
-    private func setUpSubViews() {
+    private func setUpSubviews() {
         centerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerView)
 
