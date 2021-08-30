@@ -17,6 +17,7 @@
 		8831860826DC72D500427B82 /* YumemiInternTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831860726DC72D500427B82 /* YumemiInternTaskUITests.swift */; };
 		8831861726DC736900427B82 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
 		8831861C26DC80CC00427B82 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831861B26DC80CC00427B82 /* Colors.swift */; };
+		8831862426DCA14300427B82 /* WeatherContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862326DCA14300427B82 /* WeatherContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8831860726DC72D500427B82 /* YumemiInternTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumemiInternTaskUITests.swift; sourceTree = "<group>"; };
 		8831860926DC72D500427B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8831861B26DC80CC00427B82 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8831862326DCA14300427B82 /* WeatherContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		883185E426DC72D300427B82 /* YumemiInternTask */ = {
 			isa = PBXGroup;
 			children = (
+				8831862226DCA13400427B82 /* Contract */,
 				8831862126DCA04200427B82 /* Model */,
 				8831862026DCA03700427B82 /* Presenter */,
 				8831861F26DCA03000427B82 /* View */,
@@ -163,6 +166,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8831862226DCA13400427B82 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				8831862326DCA14300427B82 /* WeatherContract.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +336,7 @@
 			files = (
 				883185EA26DC72D300427B82 /* WeatherViewController.swift in Sources */,
 				8831861C26DC80CC00427B82 /* Colors.swift in Sources */,
+				8831862426DCA14300427B82 /* WeatherContract.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
 				883185E826DC72D300427B82 /* SceneDelegate.swift in Sources */,
 			);
