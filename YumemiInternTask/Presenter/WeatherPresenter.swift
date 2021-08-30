@@ -1,3 +1,5 @@
+import enum YumemiWeather.YumemiWeatherError
+
 class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     var view: WeatherView?
     var model: WeatherModelProtocol!
@@ -20,5 +22,16 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
             fatalError("Unwxpected Weather String. YumemiWeather returned \(weatherString)")
         }
         view?.showWeather(weather)
+    }
+
+    func outputWeatherError(error: YumemiWeatherError) {
+        var message = ""
+        switch error {
+        case .invalidParameterError:
+            message = "不正なリクエストです"
+        case .unknownError:
+            message = "不明なエラーが発生しました"
+        }
+        view?.showError(message: message)
     }
 }
