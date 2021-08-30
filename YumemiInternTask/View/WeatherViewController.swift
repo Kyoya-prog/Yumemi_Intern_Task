@@ -23,6 +23,12 @@ class WeatherViewController: UIViewController, WeatherView {
         present(alert, animated: true)
     }
 
+    func showError(message: String) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+
     // MARK: Private
 
     private let weatherImageView = UIImageView()
