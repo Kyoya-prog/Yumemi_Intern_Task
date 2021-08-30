@@ -1,12 +1,6 @@
 import Foundation
 import UIKit
 
-enum Weather: String {
-    case sunny
-    case cloudy
-    case rainy
-}
-
 extension Weather {
     var image: UIImage {
         var image: UIImage?
