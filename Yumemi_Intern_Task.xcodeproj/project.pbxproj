@@ -16,6 +16,7 @@
 		883185FD26DC72D500427B82 /* Yumemi_Intern_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883185FC26DC72D500427B82 /* Yumemi_Intern_TaskTests.swift */; };
 		8831860826DC72D500427B82 /* Yumemi_Intern_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831860726DC72D500427B82 /* Yumemi_Intern_TaskUITests.swift */; };
 		8831861726DC736900427B82 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
+		8831861C26DC80CC00427B82 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831861B26DC80CC00427B82 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8831860326DC72D500427B82 /* Yumemi_Intern_TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Yumemi_Intern_TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8831860726DC72D500427B82 /* Yumemi_Intern_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yumemi_Intern_TaskUITests.swift; sourceTree = "<group>"; };
 		8831860926DC72D500427B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8831861B26DC80CC00427B82 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,11 @@
 		883185E426DC72D300427B82 /* Yumemi_Intern_Task */ = {
 			isa = PBXGroup;
 			children = (
+				8831861926DC809400427B82 /* Resource */,
 				883185E526DC72D300427B82 /* AppDelegate.swift */,
 				883185E726DC72D300427B82 /* SceneDelegate.swift */,
 				883185E926DC72D300427B82 /* ViewController.swift */,
 				883185EB26DC72D300427B82 /* Main.storyboard */,
-				883185EE26DC72D500427B82 /* Assets.xcassets */,
 				883185F026DC72D500427B82 /* LaunchScreen.storyboard */,
 				883185F326DC72D500427B82 /* Info.plist */,
 			);
@@ -128,6 +130,15 @@
 				8831860926DC72D500427B82 /* Info.plist */,
 			);
 			path = Yumemi_Intern_TaskUITests;
+			sourceTree = "<group>";
+		};
+		8831861926DC809400427B82 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				883185EE26DC72D500427B82 /* Assets.xcassets */,
+				8831861B26DC80CC00427B82 /* Colors.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				883185EA26DC72D300427B82 /* ViewController.swift in Sources */,
+				8831861C26DC80CC00427B82 /* Colors.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
 				883185E826DC72D300427B82 /* SceneDelegate.swift in Sources */,
 			);
