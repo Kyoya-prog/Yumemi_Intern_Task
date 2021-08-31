@@ -23,13 +23,6 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     }
 
     func outputWeatherError(error: WeatherError) {
-        var message = ""
-        switch error {
-        case .invalidParameterError:
-            message = "不正なリクエストです"
-        case .unknownError:
-            message = "不明なエラーが発生しました"
-        }
-        view?.showError(message: message)
+        view?.showError(message: error.errorMessage)
     }
 }
