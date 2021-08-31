@@ -14,8 +14,8 @@ class WeatherModel: WeatherModelProtocol {
         let requestJSONString = "{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }"
         do {
             let jsonString = try YumemiWeather.fetchWeather(requestJSONString)
-            let response = convertJSONStringToResponse(jsonString: jsonString)
-            output?.outputWeather(response)
+            let model = convertJSONStringToResponse(with: jsonString)
+            output?.outputWeather(model)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
             switch error {
@@ -33,7 +33,7 @@ class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    private func convertJSONStringToResponse(jsonString: String) -> Weather {
+    private func convertJSONStringToResponse(with jsonString: String) -> Weather {
         let data = Data(jsonString.utf8)
         let weatherDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
         guard let maxTemp = weatherDictionary?["max_temp"] as? Int,
