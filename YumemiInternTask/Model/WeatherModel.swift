@@ -23,7 +23,7 @@ class WeatherModel: WeatherModelProtocol {
             case .unknownError:
                 weatherError = .unknownError
             }
-            output?.outputWeatherError(with: weatherError)
+            output?.outputWeatherError(weatherError)
         } catch {
             fatalError("unexpected error occured : \(error.localizedDescription)")
         }

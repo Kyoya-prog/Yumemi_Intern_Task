@@ -23,7 +23,7 @@ protocol WeatherPresentationOutput: AnyObject {
 
     /// エラーを出力する
     /// - parameter error:エラー
-    func outputWeatherError(with error: WeatherError)
+    func outputWeatherError(_ error: WeatherError)
 }
 
 protocol WeatherModelProtocol: AnyObject {
