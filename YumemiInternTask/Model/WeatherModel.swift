@@ -33,7 +33,7 @@ class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    private func convertJSONStringToResponse(jsonString: String) -> WeatherResponse {
+    private func convertJSONStringToResponse(jsonString: String) -> Weather {
         let data = Data(jsonString.utf8)
         let weatherDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
         guard let maxTemp = weatherDictionary?["max_temp"] as? Int,
@@ -48,7 +48,7 @@ class WeatherModel: WeatherModelProtocol {
             fatalError("dateFormatting is failed")
         }
 
-        guard let weather = Weather(rawValue: weatherString) else {
+        guard let weather = WeatherType(rawValue: weatherString) else {
             fatalError("unexpecetd Weather String \(weatherString)")
         }
 

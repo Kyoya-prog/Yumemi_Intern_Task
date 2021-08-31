@@ -17,7 +17,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
 
     // MARK: WeatherPresentationOutput
 
-    func outputWeather(_ response: WeatherResponse) {
+    func outputWeather(_ response: Weather) {
         view?.showWeather(response: response)
     }
 

@@ -4,7 +4,7 @@ import UIKit
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
     /// - parameter weather:天気
-    func showWeather(response: WeatherResponse)
+    func showWeather(response: Weather)
 
     /// エラーを表示させる
     /// - parameter message:エラーメッセージ
@@ -19,7 +19,7 @@ protocol WeatherPresentation: AnyObject {
 protocol WeatherPresentationOutput: AnyObject {
     /// 取得した天気を出力する
     /// - parameter response:リクエストした天気情報のレスポンス
-    func outputWeather(_ response: WeatherResponse)
+    func outputWeather(_ response: Weather)
 
     /// エラーを出力する
     /// - parameter error:エラー
