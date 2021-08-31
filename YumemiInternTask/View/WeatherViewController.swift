@@ -1,11 +1,23 @@
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherViewController: UIViewController, WeatherView {
+    var presenter: WeatherPresentation!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpSubViews()
+        setUpSubviews()
         addConstraint()
+        presenter = WeatherPresenter(view: self)
     }
+
+    // MARK: WeatherView
+
+    func showWeather(_ weather: Weather) {
+        weatherImageView.image = weather.image
+        weatherImageView.tintColor = weather.color
+    }
+
+    // MARK: Private
 
     private let weatherImageView = UIImageView()
 
@@ -19,12 +31,11 @@ class ViewController: UIViewController {
 
     private let centerView = UIView()
 
-    private func setUpSubViews() {
+    private func setUpSubviews() {
         centerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerView)
 
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
-        weatherImageView.backgroundColor = .black
         centerView.addSubview(weatherImageView)
 
         blueLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +56,7 @@ class ViewController: UIViewController {
 
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
         reloadButton.setTitle("reload", for: .normal)
+        reloadButton.addTarget(self, action: #selector(reloadButtonAction(_:)), for: .touchUpInside)
         view.addSubview(reloadButton)
     }
 
@@ -77,5 +89,9 @@ class ViewController: UIViewController {
             reloadButton.topAnchor.constraint(equalTo: redLabel.bottomAnchor, constant: 80),
             reloadButton.centerXAnchor.constraint(equalTo: redLabel.centerXAnchor)
         ])
+    }
+
+    @objc private func reloadButtonAction(_ sender: UIButton) {
+        presenter.fetchWeather()
     }
 }
