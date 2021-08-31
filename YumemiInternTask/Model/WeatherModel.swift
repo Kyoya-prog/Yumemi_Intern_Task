@@ -15,7 +15,7 @@ class WeatherModel: WeatherModelProtocol {
             let weatherString = try YumemiWeather.fetchWeather(at: "")
             output?.outputWeather(weatherString: weatherString)
         } catch let error as YumemiWeatherError {
-            var weatherError: WeatherError
+            let weatherError: WeatherError
             switch error {
             case .invalidParameterError:
                 weatherError = .invalidParameterError
@@ -24,6 +24,7 @@ class WeatherModel: WeatherModelProtocol {
                 weatherError = .unknownError
             }
             output?.outputWeatherError(error: weatherError)
+            
         } catch {
             fatalError("unexpected error occured : \(error.localizedDescription)")
         }
