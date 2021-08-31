@@ -23,6 +23,7 @@
 		8831862B26DCAB3500427B82 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862A26DCAB3500427B82 /* Weather.swift */; };
 		8831862D26DCB77400427B82 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831862C26DCB77400427B82 /* WeatherError.swift */; };
 		8831863226DCD43600427B82 /* WeatherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831863126DCD43600427B82 /* WeatherExtension.swift */; };
+		8831863626DDF5D500427B82 /* WeatherErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831863526DDF5D500427B82 /* WeatherErrorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		8831862A26DCAB3500427B82 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		8831862C26DCB77400427B82 /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 		8831863126DCD43600427B82 /* WeatherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherExtension.swift; sourceTree = "<group>"; };
+		8831863526DDF5D500427B82 /* WeatherErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherErrorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8831863126DCD43600427B82 /* WeatherExtension.swift */,
+				8831863526DDF5D500427B82 /* WeatherErrorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				8831861C26DC80CC00427B82 /* Colors.swift in Sources */,
 				8831862826DCA6EC00427B82 /* WeatherModel.swift in Sources */,
 				8831862B26DCAB3500427B82 /* Weather.swift in Sources */,
+				8831863626DDF5D500427B82 /* WeatherErrorExtension.swift in Sources */,
 				8831862D26DCB77400427B82 /* WeatherError.swift in Sources */,
 				8831862426DCA14300427B82 /* WeatherContract.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
