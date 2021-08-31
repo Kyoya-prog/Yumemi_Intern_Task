@@ -113,8 +113,8 @@
 		883185E426DC72D300427B82 /* YumemiInternTask */ = {
 			isa = PBXGroup;
 			children = (
+				8831863326DDB69E00427B82 /* Data */,
 				8831863026DCD42600427B82 /* Extension */,
-				8831862A26DCAB3500427B82 /* Weather.swift */,
 				8831862226DCA13400427B82 /* Contract */,
 				8831862126DCA04200427B82 /* Model */,
 				8831862026DCA03700427B82 /* Presenter */,
@@ -194,6 +194,14 @@
 				8831863126DCD43600427B82 /* WeatherExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8831863326DDB69E00427B82 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8831862A26DCAB3500427B82 /* Weather.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
