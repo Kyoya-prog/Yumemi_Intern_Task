@@ -8,7 +8,7 @@ protocol WeatherView: AnyObject {
 
     /// エラーを表示させる
     /// - parameter message:エラーメッセージ
-    func showError(message: String)
+    func showError(withMesssage message: String)
 }
 
 protocol WeatherPresentation: AnyObject {
@@ -23,7 +23,7 @@ protocol WeatherPresentationOutput: AnyObject {
 
     /// エラーを出力する
     /// - parameter error:エラー
-    func outputWeatherError(error: WeatherError)
+    func outputWeatherError(with error: WeatherError)
 }
 
 protocol WeatherModelProtocol: AnyObject {
