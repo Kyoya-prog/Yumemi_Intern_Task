@@ -17,8 +17,12 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
 
     // MARK: WeatherPresentationOutput
 
-    func outputWeather(_ weather: Weather) {
-        view?.showWeather(weather)
+    func outputWeather(_ model: Weather) {
+        guard let weather = WeatherType(rawValue: model.weather) else {
+            fatalError("weather string \(model.weather) is not expected")
+        }
+        let viewModel = WeatherViewModel(weather: weather, maxTemperature: model.maxTemperature, minTemperature: model.minTemperature, date: model.date)
+        view?.showWeather(viewModel)
     }
 
     func outputWeatherError(_ error: AppError) {
