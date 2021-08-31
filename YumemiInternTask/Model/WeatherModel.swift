@@ -26,7 +26,9 @@ class WeatherModel: WeatherModelProtocol {
             }
             output?.outputWeatherError(weatherError)
         } catch {
-            fatalError("unexpected error occured : \(error.localizedDescription)")
+            assertionFailure("unexpected error occured : \(error.localizedDescription)")
+            let weatherError:WeatherError = .unknownError
+            output?.outputWeatherError(weatherError)
         }
     }
 }
