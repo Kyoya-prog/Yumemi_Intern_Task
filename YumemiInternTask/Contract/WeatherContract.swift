@@ -24,7 +24,7 @@ protocol WeatherPresentationOutput: AnyObject {
 
     /// エラーを出力する
     /// - parameter error:エラー
-    func outputWeatherError(error: YumemiWeatherError)
+    func outputWeatherError(error: WeatherError)
 }
 
 protocol WeatherModelProtocol: AnyObject {

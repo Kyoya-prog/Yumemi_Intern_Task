@@ -1,5 +1,3 @@
-import enum YumemiWeather.YumemiWeatherError
-
 class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     var view: WeatherView?
     var model: WeatherModelProtocol!
@@ -24,7 +22,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
         view?.showWeather(weather)
     }
 
-    func outputWeatherError(error: YumemiWeatherError) {
+    func outputWeatherError(error: WeatherError) {
         var message = ""
         switch error {
         case .invalidParameterError:

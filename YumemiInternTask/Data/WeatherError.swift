@@ -1,14 +1,15 @@
 import Foundation
 import UIKit
+import enum YumemiWeather.YumemiWeatherError
 
-enum YumemiWeatherError {
+enum WeatherError {
     case invalidParameterError
     case unknownError
 }
 
-extension YumemiWeatherError{
-    var errorMessage:String{
-        switch self  {
+extension WeatherError {
+    var errorMessage: String {
+        switch self {
         case .invalidParameterError:
             return "リクエストが不正です"
         case .unknownError:
