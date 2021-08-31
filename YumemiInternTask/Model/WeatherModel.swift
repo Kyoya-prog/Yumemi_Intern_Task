@@ -11,7 +11,21 @@ class WeatherModel: WeatherModelProtocol {
     // MARK: WeatherModelProtocol
 
     func fetchWeather() {
-        let weatherString = YumemiWeather.fetchWeather()
-        output?.outputWeather(weatherString: weatherString)
+        do {
+            let weatherString = try YumemiWeather.fetchWeather(at: "")
+            output?.outputWeather(weatherString: weatherString)
+        } catch let error as YumemiWeatherError {
+            let weatherError: WeatherError
+            switch error {
+            case .invalidParameterError:
+                weatherError = .invalidParameterError
+
+            case .unknownError:
+                weatherError = .unknownError
+            }
+            output?.outputWeatherError(weatherError)
+        } catch {
+            fatalError("unexpected error occured : \(error.localizedDescription)")
+        }
     }
 }
