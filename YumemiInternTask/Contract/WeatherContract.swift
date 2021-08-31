@@ -3,8 +3,8 @@ import UIKit
 
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
-    /// - parameter weather:Weather型の天気情報
-    func showWeather(_ weather: Weather)
+    /// - parameter weather:天気
+    func showWeather(weather: WeatherResponse)
 
     /// エラーを表示させる
     /// - parameter message:エラーメッセージ

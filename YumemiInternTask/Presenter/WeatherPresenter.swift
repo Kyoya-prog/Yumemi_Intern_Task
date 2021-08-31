@@ -15,17 +15,17 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
 
     // MARK: WeatherPresentationOutput
 
-    func outputWeather(jsonString:String) {
+    func outputWeather(jsonString: String) {
         let data = Data(jsonString.utf8)
         let weatherInfo = convertDataToResponse(data: data)
-        view?.showWeatherImage(weather: weatherInfo)
+        view?.showWeather(weather: weatherInfo)
     }
 
     func outputWeatherError(_ error: WeatherError) {
         view?.showError(withMesssage: error.errorMessage)
     }
-    
-    private func convertDataToResponse(data:Data)->WeatherResponse{
+
+    private func convertDataToResponse(data: Data) -> WeatherResponse {
         let weatherDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
         guard let maxTemp = weatherDictionary?["max_temp"] as? Int,
               let minTemp = weatherDictionary?["min_temp"] as? Int,
@@ -38,12 +38,11 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
         guard let date = dateFormatter.date(from: dateString) else {
             fatalError("dateFormatting is failed")
         }
-        
+
         guard let weather = Weather(rawValue: weatherString) else {
             fatalError("unexpecetd Weather String \(weatherString)")
         }
-        
+
         return .init(weather: weather, maxTemperature: maxTemp, minTemperature: minTemp, date: date)
-        
     }
 }

@@ -12,15 +12,9 @@ class WeatherViewController: UIViewController, WeatherView {
 
     // MARK: WeatherView
 
-    func showWeather(_ weather: Weather) {
-        weatherImageView.image = weather.image
-        weatherImageView.tintColor = weather.color
-    }
-
-    func showError(withMesssage message: String) {
-        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default))
-        present(alert, animated: true)
+    func showWeather(weather: WeatherResponse) {
+        weatherImageView.image = weather.weather.image
+        weatherImageView.tintColor = weather.weather.color
     }
 
     func showError(message: String) {
