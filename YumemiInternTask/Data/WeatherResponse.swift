@@ -12,4 +12,3 @@ enum Weather: String {
     case cloudy
     case rainy
 }
-

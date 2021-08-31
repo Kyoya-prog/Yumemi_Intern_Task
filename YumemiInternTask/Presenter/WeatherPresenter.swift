@@ -18,7 +18,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     func outputWeather(jsonString: String) {
         let data = Data(jsonString.utf8)
         let weatherInfo = convertDataToResponse(data: data)
-        view?.showWeather(weather: weatherInfo)
+        view?.showWeather(response: weatherInfo)
     }
 
     func outputWeatherError(_ error: WeatherError) {
