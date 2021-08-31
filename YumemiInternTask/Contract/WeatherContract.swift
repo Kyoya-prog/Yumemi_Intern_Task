@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import YumemiWeather
 
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
