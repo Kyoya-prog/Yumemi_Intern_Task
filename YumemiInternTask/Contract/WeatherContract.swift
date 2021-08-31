@@ -3,9 +3,8 @@ import UIKit
 
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
-    /// - parameter image:表示する画像
-    /// - parameter color:画像の色
-    func showWeatherImage(image: UIImage, color: UIColor)
+    /// - parameter weather:Weather型の天気情報
+    func showWeather(_ weather: Weather)
 }
 
 protocol WeatherPresentation: AnyObject {

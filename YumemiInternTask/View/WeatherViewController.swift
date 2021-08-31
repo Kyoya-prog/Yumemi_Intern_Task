@@ -12,9 +12,9 @@ class WeatherViewController: UIViewController, WeatherView {
 
     // MARK: WeatherView
 
-    func showWeatherImage(image: UIImage, color: UIColor) {
-        weatherImageView.image = image
-        weatherImageView.tintColor = color
+    func showWeather(_ weather: Weather) {
+        weatherImageView.image = weather.image
+        weatherImageView.tintColor = weather.color
     }
 
     // MARK: Private

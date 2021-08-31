@@ -19,6 +19,6 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
         guard let weather = Weather(rawValue: weatherString) else {
             fatalError("Unwxpected Weather String. YumemiWeather returned \(weatherString)")
         }
-        view?.showWeatherImage(image: weather.image, color: weather.color)
+        view?.showWeather(weather)
     }
 }
