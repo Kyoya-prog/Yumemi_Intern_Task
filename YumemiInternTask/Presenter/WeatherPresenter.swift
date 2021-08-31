@@ -1,3 +1,5 @@
+import Foundation
+
 class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     var view: WeatherView?
     var model: WeatherModelProtocol!
