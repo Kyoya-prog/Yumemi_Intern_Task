@@ -11,8 +11,9 @@ class WeatherModel: WeatherModelProtocol {
     // MARK: WeatherModelProtocol
 
     func fetchWeather() {
+        let requestJSONString = "{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }"
         do {
-            let weatherJsonString = try YumemiWeather.fetchWeather("{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }")
+            let weatherJsonString = try YumemiWeather.fetchWeather(requestJSONString)
             output?.outputWeather(jsonString: weatherJsonString)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
