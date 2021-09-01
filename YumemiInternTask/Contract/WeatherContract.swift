@@ -1,9 +1,8 @@
 import Foundation
-import UIKit
 
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
-    /// - parameter weather:Weather型の天気情報
+    /// - parameter weather:天気
     func showWeather(_ weather: Weather)
 
     /// エラーを表示させる
@@ -18,12 +17,12 @@ protocol WeatherPresentation: AnyObject {
 
 protocol WeatherPresentationOutput: AnyObject {
     /// 取得した天気を出力する
-    /// - parameter weatherString;天気を表す文字列
-    func outputWeather(weatherString: String)
+    /// - parameter weather:天気
+    func outputWeather(_ weather: Weather)
 
     /// エラーを出力する
     /// - parameter error:エラー
-    func outputWeatherError(_ error: WeatherError)
+    func outputWeatherError(_ error: AppError)
 }
 
 protocol WeatherModelProtocol: AnyObject {

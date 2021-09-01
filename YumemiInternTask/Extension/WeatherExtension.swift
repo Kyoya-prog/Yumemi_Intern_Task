@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-extension Weather {
+extension WeatherType {
     var image: UIImage {
         var image: UIImage?
         switch self {
