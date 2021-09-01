@@ -11,10 +11,10 @@ class WeatherModel: WeatherModelProtocol {
     // MARK: WeatherModelProtocol
 
     func fetchWeather() {
-        let requestJSONString = "{\"area\": \"tokyo\", \"date\": \"2020-04-01T12:00:00+09:00\" }"
+        let requestJSONString = #"{"area": "tokyo", "date": "2020-04-01T12:00:00+09:00" }"#
         do {
             let jsonString = try YumemiWeather.fetchWeather(requestJSONString)
-            let model = convertJSONStringToModel(with: jsonString)
+            let model = try convertJSONStringToModel(with: jsonString)
             output?.outputWeather(model)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
@@ -26,6 +26,8 @@ class WeatherModel: WeatherModelProtocol {
                 weatherError = .unknownError
             }
             output?.outputWeatherError(weatherError)
+        } catch let error as WeatherError {
+            output?.outputWeatherError(error)
         } catch {
             assertionFailure("unexpected error occured : \(error.localizedDescription)")
             let weatherError: WeatherError = .unknownError
@@ -33,24 +35,24 @@ class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    private func convertJSONStringToModel(with jsonString: String) -> Weather {
+    private func convertJSONStringToModel(with jsonString: String)throws -> Weather {
         let data = Data(jsonString.utf8)
-        let weatherDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+        let weatherDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
         guard let maxTemp = weatherDictionary?["max_temp"] as? Int,
               let minTemp = weatherDictionary?["min_temp"] as? Int,
               let weatherString = weatherDictionary?["weather"] as? String,
               let dateString = weatherDictionary?["date"] as? String else {
-            fatalError("converting is failed")
+            throw ConvertError.jsonConversionError
         }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXX"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         guard let date = dateFormatter.date(from: dateString) else {
-            fatalError("dateFormatting is failed")
+            throw ConvertError.dateFormattingError
         }
 
         guard let weather = WeatherType(rawValue: weatherString) else {
-            fatalError("unexpecetd Weather String \(weatherString)")
+            throw ConvertError.unexpectedResponseError
         }
 
         return .init(weather: weather, maxTemperature: maxTemp, minTemperature: minTemp, date: date)
