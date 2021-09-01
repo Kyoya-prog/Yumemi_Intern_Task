@@ -14,7 +14,7 @@ class WeatherModel: WeatherModelProtocol {
         let requestJSONString = #"{"area": "tokyo", "date": "2020-04-01T12:00:00+09:00" }"#
         do {
             let jsonString = try YumemiWeather.fetchWeather(requestJSONString)
-            let model = try convertJSONStringToModel(with: jsonString)
+            let model = try convert(with: jsonString)
             output?.outputWeather(model)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
@@ -37,7 +37,7 @@ class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    private func convertJSONStringToModel(with jsonString: String)throws -> Weather {
+    private func convert(with jsonString: String)throws -> Weather {
         let data = Data(jsonString.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
