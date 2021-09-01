@@ -26,8 +26,9 @@ class WeatherModel: WeatherModelProtocol {
                 weatherError = .unknownError
             }
             output?.outputWeatherError(weatherError)
-        } catch let error as ConvertError {
-            output?.outputWeatherError(error)
+        } catch _ as DecodingError {
+            let weatherError: WeatherError = .unknownError
+            output?.outputWeatherError(weatherError)
         } catch {
             assertionFailure("unexpected error occured : \(error.localizedDescription)")
             let weatherError: WeatherError = .unknownError
