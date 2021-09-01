@@ -18,12 +18,6 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     // MARK: WeatherPresentationOutput
 
     func outputWeather(_ model: Weather) {
-        //        guard let weather = WeatherType(rawValue: model.weather) else {
-        //            assertionFailure("weather string (\(model.weather)) is not expected")
-        //            let error: WeatherError = .unknownError
-        //            view?.showError(withMesssage: error.errorMessage)
-        //            return
-        //        }
         view?.showWeather(model)
     }
 
