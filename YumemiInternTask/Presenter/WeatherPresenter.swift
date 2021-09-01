@@ -18,13 +18,13 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     // MARK: WeatherPresentationOutput
 
     func outputWeather(_ model: Weather) {
-        guard let weather = WeatherType(rawValue: model.weather) else {
-            assertionFailure("weather string (\(model.weather)) is not expected")
-            let error: WeatherError = .unknownError
-            view?.showError(withMesssage: error.errorMessage)
-            return
-        }
-        let viewModel = WeatherViewModel(weather: weather, maxTemperature: model.maxTemp, minTemperature: model.minTemp, date: model.date)
+        //        guard let weather = WeatherType(rawValue: model.weather) else {
+        //            assertionFailure("weather string (\(model.weather)) is not expected")
+        //            let error: WeatherError = .unknownError
+        //            view?.showError(withMesssage: error.errorMessage)
+        //            return
+        //        }
+        let viewModel = WeatherViewModel(weather: model.weather, maxTemperature: model.maxTemp, minTemperature: model.minTemp, date: model.date)
         view?.showWeather(viewModel)
     }
 
