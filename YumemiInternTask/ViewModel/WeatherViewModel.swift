@@ -1,6 +1,6 @@
 import Foundation
 
-struct WeatherViewModel{
+struct WeatherViewModel {
     var weather: WeatherType
     var maxTemperature: Int
     var minTemperature: Int
