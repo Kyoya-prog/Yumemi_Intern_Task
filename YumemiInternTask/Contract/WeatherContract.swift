@@ -2,7 +2,7 @@ import Foundation
 
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
-    /// - parameter model:天気
+    /// - parameter weather:天気
     func showWeather(_ weather: Weather)
 
     /// エラーを表示させる
@@ -17,8 +17,8 @@ protocol WeatherPresentation: AnyObject {
 
 protocol WeatherPresentationOutput: AnyObject {
     /// 取得した天気を出力する
-    /// - parameter model:リクエストした天気情報のレスポンス
-    func outputWeather(_ model: Weather)
+    /// - parameter weather:天気
+    func outputWeather(_ weather: Weather)
 
     /// エラーを出力する
     /// - parameter error:エラー
