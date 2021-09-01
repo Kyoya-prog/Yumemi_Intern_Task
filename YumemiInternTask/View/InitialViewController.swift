@@ -6,6 +6,6 @@ class InitialViewController: UIViewController {
         super.viewDidAppear(animated)
         let weatherViewController = WeatherViewController()
         weatherViewController.modalPresentationStyle = .fullScreen
-        present(weatherViewController, animated: true, completion: nil)
+        present(weatherViewController, animated: true)
     }
 }
