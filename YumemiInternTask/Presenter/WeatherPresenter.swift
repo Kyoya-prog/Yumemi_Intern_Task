@@ -24,7 +24,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
             view?.showError(withMesssage: error.errorMessage)
             return
         }
-        let viewModel = WeatherViewModel(weather: weather, maxTemperature: model.maxTemperature, minTemperature: model.minTemperature, date: model.date)
+        let viewModel = WeatherViewModel(weather: weather, maxTemperature: model.maxTemp, minTemperature: model.minTemp, date: model.date)
         view?.showWeather(viewModel)
     }
 

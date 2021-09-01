@@ -42,6 +42,7 @@ class WeatherModel: WeatherModelProtocol {
         let data = Data(jsonString.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let model = try decoder.decode(Weather.self, from: data)
         return model
     }
