@@ -15,13 +15,3 @@ enum WeatherError: AppError {
         }
     }
 }
-
-enum ConvertError: AppError {
-    case jsonConversionError
-    case dateFormattingError
-    case unexpectedResponseError
-    // ユーザーに細かいエラーを見せる必要はないので、共通文言をメッセージとして表示する
-    var errorMessage: String {
-        "予期せぬエラーが発生しました"
-    }
-}

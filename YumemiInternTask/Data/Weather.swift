@@ -1,8 +1,8 @@
 import Foundation
 
-struct Weather {
+struct Weather: Decodable {
     var weather: WeatherType
-    var maxTemperature: Int
-    var minTemperature: Int
+    var maxTemp: Int
+    var minTemp: Int
     var date: Date
 }

@@ -15,8 +15,8 @@ class WeatherViewController: UIViewController, WeatherView {
     func showWeather(_ weather: Weather) {
         weatherImageView.image = weather.weather.image
         weatherImageView.tintColor = weather.weather.color
-        redLabel.text = "\(weather.maxTemperature)"
-        blueLabel.text = "\(weather.minTemperature)"
+        redLabel.text = "\(weather.maxTemp)"
+        blueLabel.text = "\(weather.minTemp)"
     }
 
     func showError(withMesssage message: String) {
