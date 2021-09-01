@@ -3,7 +3,7 @@ import Foundation
 protocol WeatherView: AnyObject {
     /// 天気画像を表示する
     /// - parameter weather:天気
-    func showWeather(_ weather: Weather)
+    func showWeather(_ weather: WeatherViewModel)
 
     /// エラーを表示させる
     /// - parameter message:エラーメッセージ
