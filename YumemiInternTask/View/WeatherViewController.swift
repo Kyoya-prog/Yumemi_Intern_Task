@@ -5,6 +5,8 @@ class WeatherViewController: UIViewController, WeatherView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .white
         setUpSubviews()
         addConstraint()
         presenter = WeatherPresenter(view: self)
