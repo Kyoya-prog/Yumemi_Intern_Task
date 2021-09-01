@@ -26,7 +26,7 @@ class WeatherModel: WeatherModelProtocol {
                 weatherError = .unknownError
             }
             output?.outputWeatherError(weatherError)
-        } catch let error as WeatherError {
+        } catch let error as ConvertError {
             output?.outputWeatherError(error)
         } catch {
             assertionFailure("unexpected error occured : \(error.localizedDescription)")
@@ -38,7 +38,7 @@ class WeatherModel: WeatherModelProtocol {
     private func convertJSONStringToModel(with jsonString: String)throws -> Weather {
         let data = Data(jsonString.utf8)
         let weatherDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-        guard let maxTemp = weatherDictionary?["max_temp"] as? Int,
+        guard let maxTemp = weatherDictionary?["ax_temp"] as? Int,
               let minTemp = weatherDictionary?["min_temp"] as? Int,
               let weatherString = weatherDictionary?["weather"] as? String,
               let dateString = weatherDictionary?["date"] as? String else {
