@@ -21,7 +21,7 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
         view?.showWeather(model)
     }
 
-    func outputWeatherError(_ error: WeatherError) {
+    func outputWeatherError(_ error: AppError) {
         view?.showError(withMesssage: error.errorMessage)
     }
 }
