@@ -4,11 +4,6 @@ class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
     var view: WeatherView?
     var model: WeatherModelProtocol!
 
-    init(view: WeatherView) {
-        self.view = view
-        self.model = WeatherModel(output: self)
-    }
-
     // MARK: WeatherPresentation
 
     func fetchWeather() {

@@ -25,6 +25,7 @@
 		888F16D926DE32E7001E6CC4 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 8831861626DC736900427B82 /* YumemiWeather */; };
 		888F16DB26DE3300001E6CC4 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16DA26DE3300001E6CC4 /* WeatherType.swift */; };
 		888F16E126DF65C4001E6CC4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E026DF65C4001E6CC4 /* InitialViewController.swift */; };
+		888F16E426DF682A001E6CC4 /* WeatherModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		8831863126DCD43600427B82 /* WeatherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherExtension.swift; sourceTree = "<group>"; };
 		888F16DA26DE3300001E6CC4 /* WeatherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherType.swift; sourceTree = "<group>"; };
 		888F16E026DF65C4001E6CC4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		883185E426DC72D300427B82 /* YumemiInternTask */ = {
 			isa = PBXGroup;
 			children = (
+				888F16E226DF6801001E6CC4 /* ModuleAssembler */,
 				8831863326DDB69E00427B82 /* Data */,
 				8831863026DCD42600427B82 /* Extension */,
 				8831862226DCA13400427B82 /* Contract */,
@@ -211,6 +214,14 @@
 				888F16DA26DE3300001E6CC4 /* WeatherType.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		888F16E226DF6801001E6CC4 /* ModuleAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */,
+			);
+			path = ModuleAssembler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +393,7 @@
 				888F16DB26DE3300001E6CC4 /* WeatherType.swift in Sources */,
 				8831862426DCA14300427B82 /* WeatherContract.swift in Sources */,
 				883185E626DC72D300427B82 /* AppDelegate.swift in Sources */,
+				888F16E426DF682A001E6CC4 /* WeatherModuleAssembler.swift in Sources */,
 				883185E826DC72D300427B82 /* SceneDelegate.swift in Sources */,
 				8831863226DCD43600427B82 /* WeatherExtension.swift in Sources */,
 			);

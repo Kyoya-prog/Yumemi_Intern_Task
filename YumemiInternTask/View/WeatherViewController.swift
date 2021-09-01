@@ -9,7 +9,6 @@ class WeatherViewController: UIViewController, WeatherView {
         view.backgroundColor = .white
         setUpSubviews()
         addConstraint()
-        presenter = WeatherPresenter(view: self)
     }
 
     // MARK: WeatherView

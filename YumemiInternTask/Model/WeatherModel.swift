@@ -4,10 +4,6 @@ import YumemiWeather
 class WeatherModel: WeatherModelProtocol {
     var output: WeatherPresentationOutput?
 
-    init(output: WeatherPresentationOutput) {
-        self.output = output
-    }
-
     // MARK: WeatherModelProtocol
 
     func fetchWeather() {
