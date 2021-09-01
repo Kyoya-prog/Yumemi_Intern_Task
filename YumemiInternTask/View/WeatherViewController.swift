@@ -12,11 +12,11 @@ class WeatherViewController: UIViewController, WeatherView {
 
     // MARK: WeatherView
 
-    func showWeather(_ model: Weather) {
-        weatherImageView.image = model.weather.image
-        weatherImageView.tintColor = model.weather.color
-        redLabel.text = "\(model.maxTemperature)"
-        blueLabel.text = "\(model.minTemperature)"
+    func showWeather(_ weather: Weather) {
+        weatherImageView.image = weather.weather.image
+        weatherImageView.tintColor = weather.weather.color
+        redLabel.text = "\(weather.maxTemperature)"
+        blueLabel.text = "\(weather.minTemperature)"
     }
 
     func showError(withMesssage message: String) {
