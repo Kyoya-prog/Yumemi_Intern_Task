@@ -27,6 +27,7 @@ class WeatherModel: WeatherModelProtocol {
             }
             output?.outputWeatherError(weatherError)
         } catch let error as DecodingError {
+            // APIの仕様変更などでdecodeに失敗した時は気づけるようにassertionFailureは投げておき、unknownErrorとして通知する
             assertionFailure("decode failed : \(error.localizedDescription)")
             let weatherError: WeatherError = .unknownError
             output?.outputWeatherError(weatherError)
