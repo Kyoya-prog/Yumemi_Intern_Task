@@ -44,6 +44,7 @@ class WeatherModel: WeatherModelProtocol {
         }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXX"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         guard let date = dateFormatter.date(from: dateString) else {
             fatalError("dateFormatting is failed")
         }
