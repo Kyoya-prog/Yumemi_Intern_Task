@@ -27,11 +27,16 @@ final class WeatherViewController: UIViewController, WeatherView {
         present(alert, animated: true)
     }
 
+    var weatherImage: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        weatherImageView.image!
+    }
+
     let reloadButton = UIButton(type: .system)
 
-    let weatherImageView = UIImageView()
-
     // MARK: Private
+
+    private let weatherImageView = UIImageView()
 
     private let blueLabel = UILabel()
 

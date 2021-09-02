@@ -25,7 +25,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImageView.image!, UIImage(named: "sunny")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "sunny")!.withRenderingMode(.alwaysTemplate))
     }
 
     func test_display_cloudy_icon_when_response_is_cloudy() {
@@ -34,7 +34,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImageView.image!, UIImage(named: "cloudy")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "cloudy")!.withRenderingMode(.alwaysTemplate))
     }
 
     func test_display_rainy_icon_when_response_is_rainy() {
@@ -43,7 +43,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImageView.image!, UIImage(named: "rainy")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "rainy")!.withRenderingMode(.alwaysTemplate))
     }
 }
 
