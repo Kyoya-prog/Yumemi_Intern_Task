@@ -1,6 +1,6 @@
 import UIKit
 
-class InitialViewController: UIViewController {
+final class InitialViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let weatherViewController = WeatherModuleAssembler.assembleWeatherModule()

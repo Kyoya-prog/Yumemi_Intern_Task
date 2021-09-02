@@ -1,6 +1,6 @@
 import UIKit
 
-class WeatherViewController: UIViewController, WeatherView {
+final class WeatherViewController: UIViewController, WeatherView {
     var presenter: WeatherPresentation!
 
     override func viewDidLoad() {

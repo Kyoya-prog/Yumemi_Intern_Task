@@ -1,6 +1,6 @@
 import class UIKit.UIViewController
 
-class WeatherModuleAssembler {
+final class WeatherModuleAssembler {
     static func assembleWeatherModule() -> UIViewController {
         let view = WeatherViewController()
         let presenter = WeatherPresenter()
