@@ -1,12 +1,8 @@
 import Foundation
 import YumemiWeather
 
-class WeatherModel: WeatherModelProtocol {
-    var output: WeatherPresentationOutput?
-
-    init(output: WeatherPresentationOutput) {
-        self.output = output
-    }
+final class WeatherModel: WeatherModelProtocol {
+    weak var output: WeatherPresentationOutput?
 
     // MARK: WeatherModelProtocol
 

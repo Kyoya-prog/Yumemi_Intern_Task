@@ -1,13 +1,14 @@
 import UIKit
 
-class WeatherViewController: UIViewController, WeatherView {
+final class WeatherViewController: UIViewController, WeatherView {
     var presenter: WeatherPresentation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .white
         setUpSubviews()
         addConstraint()
-        presenter = WeatherPresenter(view: self)
     }
 
     // MARK: WeatherView
@@ -60,11 +61,12 @@ class WeatherViewController: UIViewController, WeatherView {
 
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("close", for: .normal)
+        closeButton.addTarget(self, action: #selector(close(_:)), for: .touchUpInside)
         view.addSubview(closeButton)
 
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
         reloadButton.setTitle("reload", for: .normal)
-        reloadButton.addTarget(self, action: #selector(reloadButtonAction(_:)), for: .touchUpInside)
+        reloadButton.addTarget(self, action: #selector(reload(_:)), for: .touchUpInside)
         view.addSubview(reloadButton)
     }
 
@@ -99,7 +101,11 @@ class WeatherViewController: UIViewController, WeatherView {
         ])
     }
 
-    @objc private func reloadButtonAction(_ sender: UIButton) {
+    @objc private func reload(_ sender: UIButton) {
         presenter.fetchWeather()
+    }
+
+    @objc private func close(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 }

@@ -1,13 +1,8 @@
 import Foundation
 
-class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
-    var view: WeatherView?
+final class WeatherPresenter: WeatherPresentation, WeatherPresentationOutput {
+    weak var view: WeatherView?
     var model: WeatherModelProtocol!
-
-    init(view: WeatherView) {
-        self.view = view
-        self.model = WeatherModel(output: self)
-    }
 
     // MARK: WeatherPresentation
 
