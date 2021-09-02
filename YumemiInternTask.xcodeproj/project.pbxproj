@@ -29,6 +29,7 @@
 		888F16E726E0B32A001E6CC4 /* WeatherViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */; };
 		888F16EA26E0CCBA001E6CC4 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 888F16E926E0CCBA001E6CC4 /* OHHTTPStubs */; };
 		888F16EC26E0CCBA001E6CC4 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 888F16EB26E0CCBA001E6CC4 /* OHHTTPStubsSwift */; };
+		888F16F126E0D489001E6CC4 /* WeatherModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16F026E0D489001E6CC4 /* WeatherModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		888F16E026DF65C4001E6CC4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleAssembler.swift; sourceTree = "<group>"; };
 		888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewTests.swift; sourceTree = "<group>"; };
+		888F16F026E0D489001E6CC4 /* WeatherModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				883185FC26DC72D500427B82 /* YumemiInternTaskTests.swift */,
 				883185FE26DC72D500427B82 /* Info.plist */,
 				888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */,
+				888F16F026E0D489001E6CC4 /* WeatherModelTests.swift */,
 			);
 			path = YumemiInternTaskTests;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			files = (
 				883185FD26DC72D500427B82 /* YumemiInternTaskTests.swift in Sources */,
 				888F16E726E0B32A001E6CC4 /* WeatherViewTests.swift in Sources */,
+				888F16F126E0D489001E6CC4 /* WeatherModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
