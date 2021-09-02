@@ -2,7 +2,7 @@ import Foundation
 import YumemiWeather
 
 final class WeatherModel: WeatherModelProtocol {
-    var output: WeatherPresentationOutput?
+    weak var output: WeatherPresentationOutput?
 
     // MARK: WeatherModelProtocol
 
