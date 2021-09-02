@@ -9,7 +9,8 @@ final class WeatherModel: WeatherModelProtocol {
     func fetchWeather() {
         let requestJSONString = #"{"area": "tokyo", "date": "2020-04-01T12:00:00+09:00" }"#
         do {
-            let model = try request(input: requestJSONString)
+            let jsonString = try YumemiWeather.fetchWeather(requestJSONString)
+            let model = try convert(with: jsonString)
             output?.outputWeather(model)
         } catch let error as YumemiWeatherError {
             let weatherError: WeatherError
@@ -33,17 +34,12 @@ final class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    private func convert(with jsonString: String)throws -> Weather {
+    func convert(with jsonString: String)throws -> Weather {
         let data = Data(jsonString.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let model = try decoder.decode(Weather.self, from: data)
         return model
-    }
-
-    func request(input: String)throws ->Weather {
-        let jsonString = try YumemiWeather.fetchWeather(input)
-        return try convert(with: jsonString)
     }
 }
