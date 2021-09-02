@@ -27,17 +27,17 @@ final class WeatherViewController: UIViewController, WeatherView {
         present(alert, animated: true)
     }
 
-    // MARK: Private
+    let reloadButton = UIButton(type: .system)
 
-    private let weatherImageView = UIImageView()
+    let weatherImageView = UIImageView()
+
+    // MARK: Private
 
     private let blueLabel = UILabel()
 
     private let redLabel = UILabel()
 
     private let closeButton = UIButton(type: .system)
-
-    private let reloadButton = UIButton(type: .system)
 
     private let centerView = UIView()
 
