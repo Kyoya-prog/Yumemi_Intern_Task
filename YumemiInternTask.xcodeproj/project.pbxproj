@@ -27,6 +27,8 @@
 		888F16E126DF65C4001E6CC4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E026DF65C4001E6CC4 /* InitialViewController.swift */; };
 		888F16E426DF682A001E6CC4 /* WeatherModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */; };
 		888F16E726E0B32A001E6CC4 /* WeatherViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */; };
+		888F16EA26E0CCBA001E6CC4 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 888F16E926E0CCBA001E6CC4 /* OHHTTPStubs */; };
+		888F16EC26E0CCBA001E6CC4 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 888F16EB26E0CCBA001E6CC4 /* OHHTTPStubsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				888F16D926DE32E7001E6CC4 /* YumemiWeather in Frameworks */,
+				888F16EC26E0CCBA001E6CC4 /* OHHTTPStubsSwift in Frameworks */,
+				888F16EA26E0CCBA001E6CC4 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +250,8 @@
 			name = YumemiInternTask;
 			packageProductDependencies = (
 				8831861626DC736900427B82 /* YumemiWeather */,
+				888F16E926E0CCBA001E6CC4 /* OHHTTPStubs */,
+				888F16EB26E0CCBA001E6CC4 /* OHHTTPStubsSwift */,
 			);
 			productName = Yumemi_Intern_Task;
 			productReference = 883185E226DC72D300427B82 /* YumemiInternTask.app */;
@@ -320,6 +326,7 @@
 			mainGroup = 883185D926DC72D300427B82;
 			packageReferences = (
 				8831861526DC736900427B82 /* XCRemoteSwiftPackageReference "ios-training" */,
+				888F16E826E0CCBA001E6CC4 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 883185E326DC72D300427B82 /* Products */;
 			projectDirPath = "";
@@ -742,6 +749,14 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		888F16E826E0CCBA001E6CC4 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -749,6 +764,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8831861526DC736900427B82 /* XCRemoteSwiftPackageReference "ios-training" */;
 			productName = YumemiWeather;
+		};
+		888F16E926E0CCBA001E6CC4 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 888F16E826E0CCBA001E6CC4 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		888F16EB26E0CCBA001E6CC4 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 888F16E826E0CCBA001E6CC4 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
