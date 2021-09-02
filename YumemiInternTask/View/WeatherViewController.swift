@@ -9,7 +9,7 @@ final class WeatherViewController: UIViewController, WeatherView {
         view.backgroundColor = .white
         setUpSubviews()
         addConstraint()
-        notificationCenter.addObserver(self, selector: #selector(reloadButtonAction(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(reload(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
     // MARK: WeatherView
