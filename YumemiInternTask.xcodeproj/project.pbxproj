@@ -26,6 +26,7 @@
 		888F16DB26DE3300001E6CC4 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16DA26DE3300001E6CC4 /* WeatherType.swift */; };
 		888F16E126DF65C4001E6CC4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E026DF65C4001E6CC4 /* InitialViewController.swift */; };
 		888F16E426DF682A001E6CC4 /* WeatherModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */; };
+		888F16E726E0B32A001E6CC4 /* WeatherViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		888F16DA26DE3300001E6CC4 /* WeatherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherType.swift; sourceTree = "<group>"; };
 		888F16E026DF65C4001E6CC4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		888F16E326DF682A001E6CC4 /* WeatherModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleAssembler.swift; sourceTree = "<group>"; };
+		888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				883185FC26DC72D500427B82 /* YumemiInternTaskTests.swift */,
 				883185FE26DC72D500427B82 /* Info.plist */,
+				888F16E626E0B32A001E6CC4 /* WeatherViewTests.swift */,
 			);
 			path = YumemiInternTaskTests;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				883185FD26DC72D500427B82 /* YumemiInternTaskTests.swift in Sources */,
+				888F16E726E0B32A001E6CC4 /* WeatherViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +615,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
-				INFOPLIST_FILE = Yumemi_Intern_TaskTests/Info.plist;
+				INFOPLIST_FILE = YumemiInternTaskTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +637,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
-				INFOPLIST_FILE = Yumemi_Intern_TaskTests/Info.plist;
+				INFOPLIST_FILE = YumemiInternTaskTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,7 +658,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
-				INFOPLIST_FILE = Yumemi_Intern_TaskUITests/Info.plist;
+				INFOPLIST_FILE = YumemiInternTaskUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,7 +678,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
-				INFOPLIST_FILE = Yumemi_Intern_TaskUITests/Info.plist;
+				INFOPLIST_FILE = YumemiInternTaskUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

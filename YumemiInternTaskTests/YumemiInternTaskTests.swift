@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Yumemi_Intern_Task
+@testable import YumemiInternTask
 
 class YumemiInternTaskTests: XCTestCase {
     override func setUpWithError() throws {
