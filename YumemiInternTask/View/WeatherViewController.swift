@@ -61,12 +61,12 @@ final class WeatherViewController: UIViewController, WeatherView {
 
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("close", for: .normal)
-        closeButton.addTarget(self, action: #selector(closeButtonAction(_:)), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(close(_:)), for: .touchUpInside)
         view.addSubview(closeButton)
 
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
         reloadButton.setTitle("reload", for: .normal)
-        reloadButton.addTarget(self, action: #selector(reloadButtonAction(_:)), for: .touchUpInside)
+        reloadButton.addTarget(self, action: #selector(reload(_:)), for: .touchUpInside)
         view.addSubview(reloadButton)
     }
 
@@ -101,11 +101,11 @@ final class WeatherViewController: UIViewController, WeatherView {
         ])
     }
 
-    @objc private func reloadButtonAction(_ sender: UIButton) {
+    @objc private func reload(_ sender: UIButton) {
         presenter.fetchWeather()
     }
 
-    @objc private func closeButtonAction(_ sender: UIButton) {
+    @objc private func close(_ sender: UIButton) {
         dismiss(animated: true)
     }
 }
