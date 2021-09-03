@@ -47,6 +47,26 @@ class WeatherViewTests: XCTestCase {
         XCTAssertNotNil(view.weatherImage)
         XCTAssertEqual(view.weatherImage, UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate))
     }
+
+    func test_display_max_temprature_label() {
+        let model = WeatherModelStub(weatherType: .rainy)
+        presenter.model = model
+        model.output = presenter
+        view.viewDidLoad()
+        view.reloadButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(view.maxTemp)
+        XCTAssertEqual(view.maxTemp, 10)
+    }
+
+    func test_display_min_temperature_label() {
+        let model = WeatherModelStub(weatherType: .rainy)
+        presenter.model = model
+        model.output = presenter
+        view.viewDidLoad()
+        view.reloadButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(view.minTemp)
+        XCTAssertEqual(view.minTemp, 0)
+    }
 }
 
 private class WeatherModelStub: WeatherModelProtocol {
@@ -56,7 +76,7 @@ private class WeatherModelStub: WeatherModelProtocol {
     }
 
     func fetchWeather() {
-        output?.outputWeather(.init(weather: responseWeatherType, maxTemp: 0, minTemp: 0, date: Date()))
+        output?.outputWeather(.init(weather: responseWeatherType, maxTemp: 10, minTemp: 0, date: Date()))
     }
 
     // MARK: Private
