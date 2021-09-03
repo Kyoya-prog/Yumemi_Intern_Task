@@ -17,8 +17,8 @@ final class WeatherViewController: UIViewController, WeatherView {
     func showWeather(_ weather: Weather) {
         weatherImageView.image = weather.weather.image
         weatherImageView.tintColor = weather.weather.color
-        redLabel.text = "\(weather.maxTemp)"
-        blueLabel.text = "\(weather.minTemp)"
+        maxTempLabel.text = "\(weather.maxTemp)"
+        minTempLabel.text = "\(weather.minTemp)"
     }
 
     func showError(withMesssage message: String) {
@@ -31,15 +31,23 @@ final class WeatherViewController: UIViewController, WeatherView {
         weatherImageView.image
     }
 
+    var minTemp: Int? {
+        Int(minTempLabel.text ?? "")
+    }
+
+    var maxTemp: Int? {
+        Int(maxTempLabel.text ?? "")
+    }
+
     let reloadButton = UIButton(type: .system)
 
     // MARK: Private
 
     private let weatherImageView = UIImageView()
 
-    private let blueLabel = UILabel()
+    private let minTempLabel = UILabel()
 
-    private let redLabel = UILabel()
+    private let maxTempLabel = UILabel()
 
     private let closeButton = UIButton(type: .system)
 
@@ -54,17 +62,17 @@ final class WeatherViewController: UIViewController, WeatherView {
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
         centerView.addSubview(weatherImageView)
 
-        blueLabel.translatesAutoresizingMaskIntoConstraints = false
-        blueLabel.text = "blue"
-        blueLabel.textColor = Color.baseColorBlue.value
-        blueLabel.textAlignment = .center
-        centerView.addSubview(blueLabel)
+        minTempLabel.translatesAutoresizingMaskIntoConstraints = false
+        minTempLabel.text = "blue"
+        minTempLabel.textColor = Color.baseColorBlue.value
+        minTempLabel.textAlignment = .center
+        centerView.addSubview(minTempLabel)
 
-        redLabel.translatesAutoresizingMaskIntoConstraints = false
-        redLabel.text = "red"
-        redLabel.textColor = Color.baseColorRed.value
-        redLabel.textAlignment = .center
-        centerView.addSubview(redLabel)
+        maxTempLabel.translatesAutoresizingMaskIntoConstraints = false
+        maxTempLabel.text = "red"
+        maxTempLabel.textColor = Color.baseColorRed.value
+        maxTempLabel.textAlignment = .center
+        centerView.addSubview(maxTempLabel)
 
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("close", for: .normal)
@@ -88,23 +96,23 @@ final class WeatherViewController: UIViewController, WeatherView {
             weatherImageView.rightAnchor.constraint(equalTo: centerView.rightAnchor),
             weatherImageView.heightAnchor.constraint(equalTo: weatherImageView.widthAnchor),
 
-            blueLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor),
-            blueLabel.leftAnchor.constraint(equalTo: weatherImageView.leftAnchor),
-            blueLabel.widthAnchor.constraint(equalToConstant: view.frame.width / 4),
-            blueLabel.heightAnchor.constraint(equalToConstant: 30),
-            blueLabel.bottomAnchor.constraint(equalTo: centerView.bottomAnchor),
+            minTempLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor),
+            minTempLabel.leftAnchor.constraint(equalTo: weatherImageView.leftAnchor),
+            minTempLabel.widthAnchor.constraint(equalToConstant: view.frame.width / 4),
+            minTempLabel.heightAnchor.constraint(equalToConstant: 30),
+            minTempLabel.bottomAnchor.constraint(equalTo: centerView.bottomAnchor),
 
-            redLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor),
-            redLabel.leftAnchor.constraint(equalTo: blueLabel.rightAnchor),
-            redLabel.widthAnchor.constraint(equalToConstant: view.frame.width / 4),
-            redLabel.heightAnchor.constraint(equalToConstant: 30),
-            redLabel.bottomAnchor.constraint(equalTo: centerView.bottomAnchor),
+            maxTempLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor),
+            maxTempLabel.leftAnchor.constraint(equalTo: minTempLabel.rightAnchor),
+            maxTempLabel.widthAnchor.constraint(equalToConstant: view.frame.width / 4),
+            maxTempLabel.heightAnchor.constraint(equalToConstant: 30),
+            maxTempLabel.bottomAnchor.constraint(equalTo: centerView.bottomAnchor),
 
-            closeButton.topAnchor.constraint(equalTo: redLabel.bottomAnchor, constant: 80),
-            closeButton.centerXAnchor.constraint(equalTo: blueLabel.centerXAnchor),
+            closeButton.topAnchor.constraint(equalTo: maxTempLabel.bottomAnchor, constant: 80),
+            closeButton.centerXAnchor.constraint(equalTo: minTempLabel.centerXAnchor),
 
-            reloadButton.topAnchor.constraint(equalTo: redLabel.bottomAnchor, constant: 80),
-            reloadButton.centerXAnchor.constraint(equalTo: redLabel.centerXAnchor)
+            reloadButton.topAnchor.constraint(equalTo: maxTempLabel.bottomAnchor, constant: 80),
+            reloadButton.centerXAnchor.constraint(equalTo: maxTempLabel.centerXAnchor)
         ])
     }
 
