@@ -34,7 +34,7 @@ final class WeatherModel: WeatherModelProtocol {
         }
     }
 
-    func convert(with jsonString: String)throws -> Weather {
+    func convert(with jsonString: String) throws -> Weather {
         let data = Data(jsonString.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
