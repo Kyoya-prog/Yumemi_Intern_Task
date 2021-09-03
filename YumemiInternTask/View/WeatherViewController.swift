@@ -9,6 +9,7 @@ final class WeatherViewController: UIViewController, WeatherView {
         view.backgroundColor = .white
         setUpSubviews()
         addConstraint()
+        notificationCenter.addObserver(self, selector: #selector(reload(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
     // MARK: WeatherView
@@ -39,6 +40,8 @@ final class WeatherViewController: UIViewController, WeatherView {
     private let reloadButton = UIButton(type: .system)
 
     private let centerView = UIView()
+
+    private let notificationCenter = NotificationCenter.default
 
     private func setUpSubviews() {
         centerView.translatesAutoresizingMaskIntoConstraints = false
