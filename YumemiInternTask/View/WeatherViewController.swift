@@ -27,9 +27,8 @@ final class WeatherViewController: UIViewController, WeatherView {
         present(alert, animated: true)
     }
 
-    var weatherImage: UIImage {
-        // swiftlint:disable:next force_unwrapping
-        weatherImageView.image!
+    var weatherImage: UIImage? {
+        weatherImageView.image
     }
 
     let reloadButton = UIButton(type: .system)

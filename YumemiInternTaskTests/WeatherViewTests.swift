@@ -2,8 +2,7 @@
 //  WeatherViewTests.swift
 //  YumemiInternTaskTests
 //
-//  Created by 松山 響也 on 2021/09/02.
-// swiftlint:disable force_unwrapping
+//  Created by 松山 響也 on 2021/09/02
 
 import XCTest
 @testable import YumemiInternTask
@@ -25,7 +24,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImage, UIImage(named: "sunny")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate))
     }
 
     func test_display_cloudy_icon_when_response_is_cloudy() {
@@ -34,7 +33,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImage, UIImage(named: "cloudy")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate))
     }
 
     func test_display_rainy_icon_when_response_is_rainy() {
@@ -43,7 +42,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(view.weatherImage, UIImage(named: "rainy")!.withRenderingMode(.alwaysTemplate))
+        XCTAssertEqual(view.weatherImage, UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate))
     }
 }
 
