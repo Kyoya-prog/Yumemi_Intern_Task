@@ -24,6 +24,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(view.weatherImage)
         XCTAssertEqual(view.weatherImage, UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate))
     }
 
@@ -33,6 +34,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(view.weatherImage)
         XCTAssertEqual(view.weatherImage, UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate))
     }
 
@@ -42,6 +44,7 @@ class WeatherViewTests: XCTestCase {
         model.output = presenter
         view.viewDidLoad()
         view.reloadButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(view.weatherImage)
         XCTAssertEqual(view.weatherImage, UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate))
     }
 }
